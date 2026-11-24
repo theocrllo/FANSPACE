@@ -31,6 +31,16 @@ footer, header{
     border-bottom: 1px solid #292c34;
 }
 
+.fansite-logo{
+    letter-spacing: -2px;
+    font-style: italic;
+}
+
+footer{
+    border-top: 1px solid #292c34;
+}
+
+
 .hyperlink-header {
     display: flex;
     gap: 20px;
@@ -60,6 +70,7 @@ button{
     padding: 15px 15px;
     text-decoration: none;
     font-size: 20px;
+    border: none;
     cursor: pointer;
 }
 
@@ -67,7 +78,7 @@ button{
     color: var(--accent);
 }
 
-.domain{
+.domain, .our-concept{
     margin-top: 30px;
     color: var(--accent);
 }
@@ -75,30 +86,80 @@ button{
 .discover{
     color: var(--accent);
     letter-spacing: 3px;
+    font-size: 15px;
 }
 
-.our-univers{
-    font-size: 30px;
+.our-univers, .project{
+    font-size: 40px;
 }
 
-.discover, .our-univers{
-    margin:0px;
-    margin-left: 30px;
+.concept{
+    margin: 30px;
+    border-top: 1px solid #292c34;
 }
 
-.grid{
-    flex-direction: row;
+
+.discover-univers{
+    margin: 50px 50px;
+}
+
+.grid {
+    display: flex;
+    gap: 25px;
+    margin: 30px 4%;
     justify-content: space-around;
-    align-items: center;
     flex-wrap: wrap;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 16px
 }
 
-.grid img{
-    display: block;
+.pnl-card,
+.yokotaro-card,
+.incoming-card {
+    min-width: 0;
+    background-color: var(--surface);
+    border: 2px solid  #292e3a;
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+
+.pnl-poster,
+.yokotaro-poster,
+.incoming-poster{
     width: 100%;
-    height: 240px;
+    height: 280px;
     object-fit: cover;
+    display: block;
+    
+}
+
+.card-domain{
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 10px 10px 10px
+}
+
+.card-name{
+    font-size: 32px;
+    margin: 0 10px
+}
+
+.copyright{
+    color: var(--secondary);
+    font-size: 12px;
+}
+
+.card-description, .concept-description{
+    color: var(--secondary);
+    font-size: 16px;
+    margin: 10px 10px 30px
+}
+
+.yokotaro-card .card-domain {
+    color: #92b5eb;
+}
+
+.incoming-card .card-domain {
+    color: #b6b5d0;
 }
