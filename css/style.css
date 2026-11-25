@@ -5,6 +5,7 @@
     --secondary: #a4a8b6;
     --accent: #a5a8ff;
     --border: #292e3a;
+    --pnl:  #bd95ff;
 }
 
 body{
@@ -45,6 +46,12 @@ footer{
     display: flex;
     gap: 20px;
 }
+
+.accueil-hyperlink:hover,
+.pnl-hyperlink:hover,
+.yokotaro-hyperlink:hover,
+.incoming-hyperlink:hover{
+    color: var(--accent);}
 
 .presentation{
     padding: 50px 50px;
@@ -156,10 +163,36 @@ button{
     margin: 10px 10px 30px
 }
 
+.pnl-card .card-domain{
+    color: #bd95ff
+}
+
 .yokotaro-card .card-domain {
     color: #92b5eb;
 }
 
 .incoming-card .card-domain {
     color: #b6b5d0;
+}
+
+.pnl-card,
+.yokotaro-card,
+.incoming-card {
+    transition: 0.3s;
+}
+
+.pnl-card:hover,
+.yokotaro-card:hover,
+.incoming-card:hover {
+    transform: translateY(-8px);
+    border-color: #bd95ff;
+    box-shadow: 0 0 25px #bd95ff25;
+}
+
+.yokotaro-card:hover{
+    border-color: #92b5eb;
+}
+
+.incoming-card:hover{
+    border-color: #a4a8b6;
 }
