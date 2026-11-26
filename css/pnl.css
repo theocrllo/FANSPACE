@@ -155,7 +155,7 @@ footer{
 
 .history-card,
 .disco-card,
-.galery-card {
+.gallery-card {
     background-color: #1b1e27;
     border: 2px solid #2b2e39;
     border-radius: 20px;
@@ -168,7 +168,7 @@ footer{
 
 .history-card:hover,
 .disco-card:hover,
-.galery-card:hover{
+.gallery-card:hover{
     background-color: #20152a;
     border: 2px solid #bd95ff;
     transition: 1s;
@@ -257,6 +257,69 @@ footer{
     margin: 0;
 }
 
+
+.history-origins {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 30px 4%;
+}
+
+.history-origins img {
+    width: 40%;
+    border-radius: 20px;
+    border: 2px solid var(--border);
+}
+
+.history-text {
+    flex: 1;
+}
+
+.history-text p {
+    line-height: 1.8;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 30px 4%;
+}
+
+.timeline-row {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.timeline-year {
+    color: var(--accent);
+    font-size: 32px;
+    width: 100px;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.timeline-card {
+    flex: 1;
+    background-color: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: 20px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.timeline-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 25px #bd95ff25;
+}
+
+.timeline-card .card-description {
+    margin-bottom: 0;
+}
+
+
+
 @media screen and (max-width: 767px) {
     .overview-highlight {
         flex-direction: column;
@@ -342,6 +405,32 @@ footer{
         width: 100%;
         text-align: center;
     }
+
+
+        .history-origins {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .history-origins img {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .timeline-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .timeline-year {
+        font-size: 24px;
+        width: auto;
+    }
+
+    .timeline-card {
+        padding: 15px;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -375,5 +464,198 @@ footer{
     footer {
         flex-direction: column;
         gap: 15px;
+    }
+}
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin: 30px 4%;
+}
+
+.album-card {
+    background-color: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+    min-width: 0;
+    transition: 0.3s;
+}
+
+.album-poster {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.album-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 0 25px #bd95ff25;
+}
+
+.quotes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 30px 4% 50px;
+}
+
+.quote-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 15px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.quote-text {
+    font-size: 32px;
+    font-style: italic;
+    margin: 10px;
+}
+
+.quote-card .card-description {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.quote-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 25px #bd95ff25;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .album-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .quote-text {
+        font-size: 26px;
+    }
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 30px 4%;
+}
+
+.news-grid .album-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-poster {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.news-grid .card-name {
+    font-size: 26px;
+}
+
+.news-link {
+    display: inline-block;
+    color: var(--pnl);
+    margin: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.news-grid .news-link {
+    margin-top: auto;
+}
+
+.news-link:hover {
+    color: var(--text);
+    transform: translateX(5px);
+}
+
+.news-ending {
+    text-align: center;
+    background-color: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: 20px;
+    margin: 50px 4%;
+    padding: 40px;
+}
+
+.news-ending .concept-description {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-ending {
+        padding: 25px;
+        margin: 20px;
+    }
+
+    .news-grid .card-name {
+        font-size: 24px;
+    }
+}
+
+.gallery {
+    column-count: 3;
+    column-gap: 20px;
+    margin: 40px 8%;
+}
+
+.gallery-card {
+    background-color: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    break-inside: avoid;
+    transition: 0.3s;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-card .card-description {
+    font-size: 14px;
+    margin: 12px;
+}
+
+.gallery-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--pnl);
+    box-shadow: 0 0 25px #bd95ff25;
+}
+
+@media screen and (max-width: 1024px) {
+    .gallery {
+        column-count: 2;
+        margin: 30px 4%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .gallery {
+        column-count: 1;
+        margin: 20px;
     }
 }
