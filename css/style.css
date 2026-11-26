@@ -1,3 +1,5 @@
+/* Accueil - variables */
+
 :root {
     --background: #040710;
     --surface: #1b1e28;
@@ -7,6 +9,8 @@
     --border: #292e3a;
    --pnl:  #bd95ff;
 }
+
+/* Accueil - base */
 
 html{
     scroll-behavior: smooth;
@@ -23,9 +27,14 @@ body{
 }
 
 a { color: inherit; text-decoration: none; }
+
 img { display: block; max-width: 100%; }
+
 h1, h2, h3, p { margin-top: 0; }
+
 h1, h2, h3 { font-family: 'Manrope', Arial, sans-serif; }
+
+/* Accueil - header / footer / nav */
 
 footer, header{
     background-color: var(--background);
@@ -47,7 +56,6 @@ footer{
     border-top: 1px solid #292c34;
 }
 
-
 .hyperlink-header {
     display: flex;
     gap: 20px;
@@ -60,6 +68,8 @@ footer{
     color: var(--accent);
     transition: 0.3s;
 }
+
+/* Accueil - banniere */
 
 .presentation{
     padding: 50px 50px;
@@ -101,6 +111,8 @@ footer{
     color: var(--accent);
 }
 
+/* Accueil - sections */
+
 .discover{
     color: var(--accent);
     letter-spacing: 3px;
@@ -111,15 +123,20 @@ footer{
     font-size: 40px;
 }
 
+/* Accueil - concept */
+
 .concept{
     margin: 30px;
     border-top: 1px solid #292c34;
 }
 
+/* Accueil - sections */
 
 .discover-univers{
     margin: 50px 50px;
 }
+
+/* Accueil - grid */
 
 .grid {
     display: flex;
@@ -128,6 +145,8 @@ footer{
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
+/* Accueil - cards */
 
 .pnl-card,
 .yokotaro-card,
@@ -150,6 +169,8 @@ footer{
     
 }
 
+/* Accueil - cards */
+
 .card-domain{
     color: var(--accent);
     font-size: 13px;
@@ -163,16 +184,22 @@ footer{
     margin: 0 10px
 }
 
+/* Accueil - footer */
+
 .copyright{
     color: var(--secondary);
     font-size: 12px;
 }
+
+/* Accueil - cards */
 
 .card-description, .concept-description{
     color: var(--secondary);
     font-size: 16px;
     margin: 10px 10px 30px
 }
+
+/* Accueil - cards */
 
 .pnl-card .card-domain{
     color: #bd95ff
@@ -208,107 +235,117 @@ footer{
     border-color: #a4a8b6;
 }
 
+/* Accueil - responsive 767px */
 
 @media screen and (max-width: 767px) {
 
     header, footer {
-        flex-direction: column;
-        padding: 20px 10px;
-        gap: 15px;
-        text-align: center;
-    }
+            flex-direction: column;
+            padding: 20px 10px;
+            gap: 15px;
+            text-align: center;
+        }
 
     .fansite-logo h1 {
-        margin: 0;
-        font-size: 28px;
-    }
+            margin: 0;
+            font-size: 28px;
+        }
 
     .hyperlink-header {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-        font-size: 14px;
-    }
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            font-size: 14px;
+        }
+
 
     .presentation {
-        padding: 30px 20px;
-        background-size: cover;
-        background-position: center;
-    }
+            padding: 30px 20px;
+            background-size: cover;
+            background-position: center;
+        }
 
     .presentation h1 {
-        font-size: 45px;
-        letter-spacing: -2px;
-    }
+            font-size: 45px;
+            letter-spacing: -2px;
+        }
 
     .presentation p {
-        font-size: 15px;
-        line-height: 1.6;
-    }
+            font-size: 15px;
+            line-height: 1.6;
+        }
 
     .explore {
-        display: inline-block;
-        font-size: 15px;
-        padding: 12px 20px;
-    }
+            display: inline-block;
+            font-size: 15px;
+            padding: 12px 20px;
+        }
+
 
     .discover-univers {
-        margin: 30px 20px;
-    }
+            margin: 30px 20px;
+        }
 
     .our-univers, .project {
-        font-size: 30px;
-    }
+            font-size: 30px;
+        }
+
 
     .card-name {
-        font-size: 26px;
-    }
+            font-size: 26px;
+        }
 
     .card-description, .concept-description {
-        font-size: 14px;
-        line-height: 1.6;
-    }
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
 
     .concept {
-        margin: 20px;
-    }
+            margin: 20px;
+        }
 
     .copyright {
-        width: 100%;
-        text-align: center;
-    }
+            width: 100%;
+            text-align: center;
+        }
 }
+
+/* Accueil - responsive 1024px */
 
 @media screen and (max-width: 1024px) {
 
+
     header, footer {
-        padding: 20px;
-    }
+            padding: 20px;
+        }
 
     .hyperlink-header {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
 
     .presentation {
-        padding: 35px;
-    }
+            padding: 35px;
+        }
 
     .presentation h1 {
-        font-size: 65px;
-    }
+            font-size: 65px;
+        }
 
     .presentation p {
-        font-size: 16px;
-    }
+            font-size: 16px;
+        }
+
 
     .our-univers, .project {
-        font-size: 35px;
-    }
+            font-size: 35px;
+        }
 
     footer {
-        flex-direction: column;
-        gap: 15px;
-    }
+            flex-direction: column;
+            gap: 15px;
+        }
 }

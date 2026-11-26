@@ -1,3 +1,5 @@
+/* PNL commun - variables */
+
 :root {
     --background: #040710;
     --surface: #1b1e28;
@@ -6,6 +8,8 @@
     --accent:  #bd95ff;
     --border: #292e3a;
 }
+
+/* PNL commun - base */
 
 body{
     color: var(--text);
@@ -16,9 +20,14 @@ body{
 }
 
 a { color: inherit; text-decoration: none; }
+
 img { display: block; max-width: 100%; }
+
 h1, h2, h3, p { margin-top: 0; }
+
 h1, h2, h3 { font-family: 'Manrope', Arial, sans-serif; }
+
+/* PNL commun - header / footer / nav */
 
 footer, header{
     background-color: var(--background);
@@ -75,6 +84,8 @@ footer{
     transition: 0.3s;
 }
 
+/* PNL commun - banner */
+
 .presentation{
     padding: 50px 50px;
     background: url(../images/qlf-background.png);
@@ -125,6 +136,8 @@ footer{
     color: var(--accent);
 }
 
+/* PNL accueil - sections */
+
 .discover{
     color: var(--accent);
     letter-spacing: 3px;
@@ -135,27 +148,35 @@ footer{
     font-size: 40px;
 }
 
+/* PNL accueil - concept */
+
 .concept{
     margin: 30px;
     border-top: 1px solid #292c34;
 }
 
+/* PNL accueil - sections */
 
 .discover-univers{
     margin: 50px 50px;
 }
 
+/* PNL accueil - grid */
+
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+    align-items: stretch;
     gap: 20px;
     margin: 40px;
 }
 
+/* PNL accueil - cards */
 
 .history-card,
 .disco-card,
-.gallery-card {
+.gallery-link-card {
     background-color: #1b1e27;
     border: 2px solid #2b2e39;
     border-radius: 20px;
@@ -168,17 +189,38 @@ footer{
 
 .history-card:hover,
 .disco-card:hover,
-.gallery-card:hover{
+.gallery-link-card:hover{
     background-color: #20152a;
     border: 2px solid #bd95ff;
     transition: 1s;
 }
 
-@media screen and (max-width: 767px) {
-    .grid {
-        grid-template-columns: 1fr;
+/* PNL accueil - titles */
+
+.grid .card-name {
+    overflow-wrap: anywhere;
+}
+
+/* PNL accueil - tablet */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .grid .card-name {
+        font-size: clamp(18px, 2.5vw, 26px);
     }
 }
+
+/* PNL accueil - responsive 767px */
+
+@media screen and (max-width: 767px) {
+
+    /* PNL accueil - grid */
+
+    .grid {
+            grid-template-columns: 1fr;
+        }
+}
+
+/* PNL commun - cards */
 
 .card-domain{
     color: var(--accent);
@@ -193,16 +235,22 @@ footer{
     margin: 0 10px
 }
 
+/* PNL commun - footer */
+
 .copyright{
     color: var(--secondary);
     font-size: 12px;
 }
+
+/* PNL commun - cards */
 
 .card-description, .concept-description{
     color: var(--secondary);
     font-size: 16px;
     margin: 20px 10px 30px
 }
+
+/* PNL accueil - featured album */
 
 .overview-highlight {
     display: flex;
@@ -257,6 +305,7 @@ footer{
     margin: 0;
 }
 
+/* PNL histoire - intro */
 
 .history-origins {
     display: flex;
@@ -278,6 +327,8 @@ footer{
 .history-text p {
     line-height: 1.8;
 }
+
+/* PNL histoire - timeline */
 
 .timeline {
     display: flex;
@@ -318,154 +369,184 @@ footer{
     margin-bottom: 0;
 }
 
-
+/* PNL commun - responsive 767px */
 
 @media screen and (max-width: 767px) {
+
+    /* PNL accueil - featured album */
+
     .overview-highlight {
-        flex-direction: column;
-        padding: 20px;
-    }
+            flex-direction: column;
+            padding: 20px;
+        }
 
     .overview-image,
-    .overview-text {
-        width: 100%;
-    }
+        .overview-text {
+            width: 100%;
+        }
 
     .overview-title {
-        font-size: 30px;
-    }
+            font-size: 30px;
+        }
 
     .overview-description {
-        font-size: 17px;
-    }
+            font-size: 17px;
+        }
 
-      header, footer {
-        flex-direction: column;
-        padding: 20px 10px;
-        gap: 15px;
-        text-align: center;
-    }
+    /* PNL commun - header / footer / nav */
+
+    header, footer {
+            flex-direction: column;
+            padding: 20px 10px;
+            gap: 15px;
+            text-align: center;
+        }
 
     .fansite-logo h1 {
-        margin: 0;
-        font-size: 28px;
-    }
+            margin: 0;
+            font-size: 28px;
+        }
 
     .hyperlink-header, .hyperlink-header-pnl {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-        font-size: 14px;
-    }
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            font-size: 14px;
+        }
+
+    /* PNL commun - banniere */
 
     .presentation {
-        padding: 30px 20px;
-        background-size: cover;
-        background-position: center;
-    }
+            padding: 30px 20px;
+            background-size: cover;
+            background-position: center;
+        }
 
     .presentation h1 {
-        font-size: 45px;
-        letter-spacing: -2px;
-    }
+            font-size: 45px;
+            letter-spacing: -2px;
+        }
 
     .presentation p {
-        font-size: 15px;
-        line-height: 1.6;
-    }
+            font-size: 15px;
+            line-height: 1.6;
+        }
 
     .explore {
-        display: inline-block;
-        font-size: 15px;
-        padding: 12px 20px;
-    }
+            display: inline-block;
+            font-size: 15px;
+            padding: 12px 20px;
+        }
+
+    /* PNL accueil - sections */
 
     .discover-univers {
-        margin: 30px 20px;
-    }
+            margin: 30px 20px;
+        }
 
     .our-univers, .project {
-        font-size: 30px;
-    }
+            font-size: 30px;
+        }
+
+    /* PNL commun - cards */
 
     .card-name {
-        font-size: 26px;
-    }
+            font-size: 26px;
+        }
 
     .card-description, .concept-description {
-        font-size: 14px;
-        line-height: 1.6;
-    }
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+    /* PNL accueil - concept */
 
     .concept {
-        margin: 20px;
-    }
+            margin: 20px;
+        }
+
+    /* PNL commun - footer */
 
     .copyright {
-        width: 100%;
-        text-align: center;
-    }
+            width: 100%;
+            text-align: center;
+        }
 
+    /* PNL histoire - intro */
 
-        .history-origins {
-        flex-direction: column;
-        gap: 20px;
-    }
+    .history-origins {
+            flex-direction: column;
+            gap: 20px;
+        }
 
     .history-origins img {
-        width: 100%;
-        box-sizing: border-box;
-    }
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+    /* PNL histoire - timeline */
 
     .timeline-row {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 10px;
-    }
+            flex-direction: column;
+            align-items: stretch;
+            gap: 10px;
+        }
 
     .timeline-year {
-        font-size: 24px;
-        width: auto;
-    }
+            font-size: 24px;
+            width: auto;
+        }
 
     .timeline-card {
-        padding: 15px;
-    }
+            padding: 15px;
+        }
 }
+
+/* PNL commun - responsive 1024px */
 
 @media screen and (max-width: 1024px) {
 
+    /* PNL commun - header / footer / nav */
+
     header, footer {
-        padding: 20px;
-    }
+            padding: 20px;
+        }
 
     .hyperlink-header {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+    /* PNL commun - banner */
 
     .presentation {
-        padding: 35px;
-    }
+            padding: 35px;
+        }
 
     .presentation h1 {
-        font-size: 65px;
-    }
+            font-size: 65px;
+        }
 
     .presentation p {
-        font-size: 16px;
-    }
+            font-size: 16px;
+        }
+
+    /* PNL accueil - sections */
 
     .our-univers, .project {
-        font-size: 35px;
-    }
+            font-size: 35px;
+        }
+
+    /* PNL commun - header / footer / nav */
 
     footer {
-        flex-direction: column;
-        gap: 15px;
-    }
+            flex-direction: column;
+            gap: 15px;
+        }
 }
+
+/* PNL disco - cards */
 
 .album-grid {
     display: grid;
@@ -494,6 +575,8 @@ footer{
     border-color: var(--accent);
     box-shadow: 0 0 25px #bd95ff25;
 }
+
+/* PNL disco - quotes */
 
 .quotes {
     display: flex;
@@ -527,16 +610,24 @@ footer{
     box-shadow: 0 0 25px #bd95ff25;
 }
 
+/* PNL disco - responsive 1024px */
+
 @media screen and (max-width: 1024px) {
 
+    /* PNL disco - cards */
+
     .album-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+    /* PNL disco - quotes */
 
     .quote-text {
-        font-size: 26px;
-    }
+            font-size: 26px;
+        }
 }
+
+/* PNL news - cards */
 
 .news-grid {
     display: grid;
@@ -590,28 +681,35 @@ footer{
     margin-bottom: 0;
 }
 
+/* PNL news - responsive 1024px */
+
 @media screen and (max-width: 1024px) {
 
+
     .news-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+            grid-template-columns: repeat(2, 1fr);
+        }
 }
+
 
 @media screen and (max-width: 767px) {
 
+
     .news-grid {
-        grid-template-columns: 1fr;
-    }
+            grid-template-columns: 1fr;
+        }
 
     .news-ending {
-        padding: 25px;
-        margin: 20px;
-    }
+            padding: 25px;
+            margin: 20px;
+        }
 
     .news-grid .card-name {
-        font-size: 24px;
-    }
+            font-size: 24px;
+        }
 }
+
+/* PNL galerie - cards */
 
 .gallery {
     column-count: 3;
@@ -619,7 +717,7 @@ footer{
     margin: 40px 8%;
 }
 
-.gallery-card {
+.gallery .gallery-card {
     background-color: var(--surface);
     border: 2px solid var(--border);
     border-radius: 12px;
@@ -629,33 +727,41 @@ footer{
     transition: 0.3s;
 }
 
-.gallery-card img {
+.gallery .gallery-card img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-.gallery-card .card-description {
+.gallery .gallery-card .card-description {
     font-size: 14px;
     margin: 12px;
 }
 
-.gallery-card:hover {
+/* PNL galerie - hover */
+
+.gallery .gallery-card:hover {
     transform: translateY(-4px);
     border-color: var(--pnl);
     box-shadow: 0 0 25px #bd95ff25;
 }
 
+
 @media screen and (max-width: 1024px) {
+
+
     .gallery {
-        column-count: 2;
-        margin: 30px 4%;
-    }
+            column-count: 2;
+            margin: 30px 4%;
+        }
 }
 
+
 @media screen and (max-width: 767px) {
+
+
     .gallery {
-        column-count: 1;
-        margin: 20px;
-    }
+            column-count: 1;
+            margin: 20px;
+        }
 }
