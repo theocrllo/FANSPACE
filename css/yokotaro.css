@@ -1,0 +1,336 @@
+:root {
+    --background: #040710;
+    --surface: #1b1e28;
+    --text: #f6f6fa;
+    --secondary: #a4a8b6;
+    --accent: #a5a8ff;
+    --border: #292e3a;
+}
+
+body{
+    color: var(--text);
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2, h3 { font-family: 'Manrope', Arial, sans-serif; }
+
+footer, header, .hyperlink-yt{
+    background-color: var(--background);
+    margin: 0;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #292c34;
+}
+
+footer, header {
+    justify-content: space-between;
+}
+
+.fansite-logo{
+    letter-spacing: -2px;
+    font-style: italic;
+}
+
+footer{
+    border-top: 1px solid #292c34;
+}
+
+.taro, .domain, .passion{
+    color: #9ac7e8;
+}
+
+.domain{
+    letter-spacing: 2px;
+}
+
+.hyperlink-header, .hyperlink-yt{
+    display: flex;
+    gap: 20px;
+}
+
+.accueil-hyperlink:hover,
+.pnl-hyperlink:hover,
+.yokotaro-hyperlink:hover,
+.incoming-hyperlink:hover{
+    color:#9ac7e8;
+}
+
+.presentation{
+    padding: 50px 50px;
+    background: url(../images/yokotaro-background.png);
+    opacity: 50;
+
+}
+
+.presentation h1{
+    font-size: 90px;
+    font-weight: 800px;
+    line-height: 1.1;
+    letter-spacing: -3px;
+}
+
+.presentation p{
+    font-size: 18px;
+}
+
+button{
+    background-color: var(--accent);
+    border-radius: 25px;
+    padding: 15px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.domain-text{
+    color: var(--secondary);
+}
+
+.work {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.work-title {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.drakengard, .nier, .drakengard3, .nierautomata, .voc, .proj {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-template-rows: auto 1fr;
+    align-items: center;
+    min-width: 0;
+    overflow: hidden;
+    background-color: var(--surface);
+    border: 2px solid #292e3a;
+    border-radius: 20px;
+}
+
+.drakengard img, .nier img, .drakengard3 img, .nierautomata img, .voc img, .proj img {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    object-fit: cover;
+}
+
+.drakengard:hover, .nier:hover, .drakengard3:hover, .nierautomata:hover, .voc:hover, .proj:hover {
+    transform: scale(1.02);
+    transition: 0.2s;
+    border-color: #9ac7e8;
+    box-shadow: 0 0 25px #bd95ff25;
+    background-color: #1b2c39b9
+}
+
+.work-sub,
+.work-text {
+    grid-column: 2;
+    margin: 16px;
+}
+
+@media (max-width: 850px) {
+    .work {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+    .drakengard,
+    .nier,
+    .drakengard3,
+    .nierautomata,
+    .voc,
+    .proj {
+        grid-template-columns: 1fr;
+    }
+
+    .drakengard img,
+    .nier img,
+    .drakengard3 img,
+    .nierautomata img,
+    .voc img,
+    .proj img {
+        grid-column: 1;
+        grid-row: auto;
+        height: 220px;
+    }
+
+    .work-sub,
+    .work-text {
+        grid-column: 1;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+
+    header, footer {
+        flex-direction: column;
+        padding: 20px 10px;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .fansite-logo h1 {
+        margin: 0;
+        font-size: 28px;
+    }
+
+    .hyperlink-header, .hyperlink-yt {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .presentation {
+        padding: 30px 20px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .presentation h1 {
+        font-size: 45px;
+        letter-spacing: -2px;
+    }
+
+    .presentation p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .explore {
+        display: inline-block;
+        font-size: 15px;
+        padding: 12px 20px;
+    }
+
+    .discover-univers {
+        margin: 30px 20px;
+    }
+
+    .our-univers, .project {
+        font-size: 30px;
+    }
+
+    .card-name {
+        font-size: 26px;
+    }
+
+    .card-description, .concept-description {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .concept {
+        margin: 20px;
+    }
+
+    .copyright {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    header, footer {
+        padding: 20px;
+    }
+
+    .hyperlink-header {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .presentation {
+        padding: 35px;
+    }
+
+    .presentation h1 {
+        font-size: 65px;
+    }
+
+    .presentation p {
+        font-size: 16px;
+    }
+
+    .our-univers, .project {
+        font-size: 35px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+.gallery {
+    columns: 3 250px;
+    column-gap: 18px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 30px;
+}
+
+.gallery-item {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 18px;
+    overflow: hidden;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    break-inside: avoid;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.gallery-item figcaption {
+    padding: 14px 16px;
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        columns: 2 150px;
+        column-gap: 12px;
+        padding: 0 16px;
+    }
+
+    .gallery-item {
+        margin-bottom: 12px;
+    }
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 300ms ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.04);
+}
