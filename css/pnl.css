@@ -40,7 +40,6 @@ footer{
     border-top: 1px solid #292c34;
 }
 
-
 .hyperlink-header {
     display: flex;
     gap: 20px;
@@ -50,7 +49,31 @@ footer{
 .pnl-hyperlink:hover,
 .yokotaro-hyperlink:hover,
 .incoming-hyperlink:hover{
-    color: var(--accent);}
+    color: var(--accent);
+    transition: 0.3s;
+}
+
+.pnl-navigation{
+    background-color: var(--background);
+    margin: 0;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #292c34;
+    gap: 30px;
+}
+
+.hyperlink-header-pnl {
+    display: flex;
+    gap: 20px;
+}
+
+.hyperlink-header-pnl a:hover {
+    color: var(--accent);
+    transition: 0.3s;
+}
 
 .presentation{
     padding: 50px 50px;
@@ -64,22 +87,192 @@ footer{
     font-weight: 800px;
     line-height: 1.1;
     letter-spacing: -3px;
+
 }
 
-.presentation p{
-    font-size: 18px;
+.domain{
+    letter-spacing: 2px;
 }
 
-button{
+.second-title{
+    font-size: 25px;
+}
+
+.presentation-description{
+    color: var(--secondary);
+    margin-bottom: 35px;
+}
+
+.explore{
+    border-top: 1px solid #292c34;
     background-color: var(--accent);
-    border-radius: 25px;
+    margin-top: 10px;
+    border-radius: 30px;
     padding: 15px 15px;
     text-decoration: none;
     font-size: 20px;
     border: none;
     cursor: pointer;
+    color: #040710;
 }
 
 .passion, .domain{
     color: var(--accent);
+}
+
+.domain, .our-concept{
+    margin-top: 30px;
+    color: var(--accent);
+}
+
+.discover{
+    color: var(--accent);
+    letter-spacing: 3px;
+    font-size: 15px;
+}
+
+.our-univers, .project{
+    font-size: 40px;
+}
+
+.concept{
+    margin: 30px;
+    border-top: 1px solid #292c34;
+}
+
+
+.discover-univers{
+    margin: 50px 50px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 40px;
+}
+
+
+.history-card,
+.disco-card,
+.galery-card {
+    background-color: #1b1e27;
+    border: 2px solid #2b2e39;
+    border-radius: 20px;
+    padding: 20px;
+    min-height: 200px;
+    box-sizing: border-box;
+    min-width: 0;
+
+}
+
+.history-card:hover,
+.disco-card:hover,
+.galery-card:hover{
+    background-color: #20152a;
+    border: 2px solid #bd95ff;
+    transition: 1s;
+}
+
+@media screen and (max-width: 767px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card-domain{
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 10px 10px 10px
+}
+
+.card-name{
+    font-size: 32px;
+    margin: 0 10px
+}
+
+.copyright{
+    color: var(--secondary);
+    font-size: 12px;
+}
+
+.card-description, .concept-description{
+    color: var(--secondary);
+    font-size: 16px;
+    margin: 20px 10px 30px
+}
+
+.overview-highlight {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: #1b1e27;
+    border: 2px solid #2b2e39;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.overview-image {
+    width: 40%;
+}
+
+.overview-image img {
+    width: 75%;
+    display: block;
+    object-fit: cover;
+
+}
+
+.overview-image img:hover{
+    border: 2px solid #bd95ff;
+    transform: scale(1.05);
+    transition: 1s;
+}
+
+.overview-text {
+    width: 60%;
+}
+
+.overview-label {
+    color: #b58cff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.overview-title {
+    color: white;
+    font-size: 42px;
+    margin: 0 0 15px 0;
+}
+
+.overview-description {
+    color: #a7aab4;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .overview-highlight {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .overview-image,
+    .overview-text {
+        width: 100%;
+    }
+
+    .overview-title {
+        font-size: 30px;
+    }
+
+    .overview-description {
+        font-size: 17px;
+    }
 }
