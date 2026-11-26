@@ -8,6 +8,12 @@
    --pnl:  #bd95ff;
 }
 
+html{
+    scroll-behavior: smooth;
+
+
+}
+
 body{
     color: var(--text);
     font-family: 'Inter', Arial, sans-serif;
@@ -199,4 +205,109 @@ footer{
 
 .incoming-card:hover{
     border-color: #a4a8b6;
+}
+
+
+@media screen and (max-width: 767px) {
+
+    header, footer {
+        flex-direction: column;
+        padding: 20px 10px;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .fansite-logo h1 {
+        margin: 0;
+        font-size: 28px;
+    }
+
+    .hyperlink-header {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .presentation {
+        padding: 30px 20px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .presentation h1 {
+        font-size: 45px;
+        letter-spacing: -2px;
+    }
+
+    .presentation p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .explore {
+        display: inline-block;
+        font-size: 15px;
+        padding: 12px 20px;
+    }
+
+    .discover-univers {
+        margin: 30px 20px;
+    }
+
+    .our-univers, .project {
+        font-size: 30px;
+    }
+
+    .card-name {
+        font-size: 26px;
+    }
+
+    .card-description, .concept-description {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .concept {
+        margin: 20px;
+    }
+
+    .copyright {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    header, footer {
+        padding: 20px;
+    }
+
+    .hyperlink-header {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .presentation {
+        padding: 35px;
+    }
+
+    .presentation h1 {
+        font-size: 65px;
+    }
+
+    .presentation p {
+        font-size: 16px;
+    }
+
+    .our-univers, .project {
+        font-size: 35px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
