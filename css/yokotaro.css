@@ -77,6 +77,11 @@ footer {
     color: var(--accent);
 }
 
+.copyright{
+    color: var(--secondary);
+    font-size: 12px;
+}
+
 /* Présentation */
 .presentation {
     padding: 50px;
@@ -136,36 +141,80 @@ footer {
     border-radius: 20px;
 }
 
-.bio-text p,
-.style p,
-.note-text {
+.bio:hover img {
+    transform: scale(1.02);
+    transition: 0.2s;
+}
+
+.bio-text p {
     line-height: 1.8;
 }
 
-.style,
+.style {
+    max-width: 1000px;
+    margin: 0 auto 80px;
+    padding: 0 30px;
+    font-size: 130%;
+}    
+
+.style-text {
+    font-style: italic;
+}
+
+.note-title {
+    grid-column: 1/ -1;
+    text-align: center;
+    font-style: italic;
+}
+
 .note {
-    margin: 50px 50px;
-    padding: 30px 30px;
     display: grid;
-    gap: 16px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.note-text {
+    display: grid;
+    grid-template-columns: 40% minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    align-items: center;
+    min-width: 0;
+    overflow: hidden;
     background-color: var(--surface);
     border: 2px solid var(--border);
     border-radius: 20px;
 }
 
-.note-title {
-    margin-bottom: 30px;
+.note-text img {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    object-fit: cover;
 }
 
-.note-sub {
-    margin: 25px 0 10px;
+.note-text:hover{
+    transform: scale(1.02);
+    transition: 0.2s;
+    background-color: #1b2c39b9;
+    border-color: var(--accent);
+    box-shadow: 0 0 25px #bd95ff25;
 }
 
-.news-pic {
-    width: 45%;
-    margin: 50px;
-    border: 2px solid var(--border);
-    border-radius: 20px;
+.note-text h2,
+.note-text p {
+    grid-column: 2;
+    margin: 16px;
+}
+
+.note-text h2 {
+    margin-top: 5%;
+}
+
+.note-text p {
+    color: var(--secondary);
 }
 
 /* Citations */
@@ -322,7 +371,7 @@ blockquote {
 }
 
 /* Actualités */
-.news {
+.news-sub {
     display: grid;
     gap: 16px;
     margin: 30px;
@@ -332,10 +381,38 @@ blockquote {
     border-radius: 20px;
 }
 
-.news-text {
-    margin: 0;
+.news {
+    margin: 0 300px;
+    font-size: 130%;
+margin-bottom: 80px;
+}
+
+.news-description .taro, .news{
+    font-style: italic;
+}
+
+.news-description{
+    display: flex;
+    align-items: center;
+}
+
+.news-sub{
+    margin-left: -225px;
+    margin-top: 200px;
+    margin-right: 100px;
+}
+
+.news-pic {
+    width: 45%;
+    margin: 50px;
+    margin-bottom: 200px;
+    border: 2px solid var(--border);
+    border-radius: 20px;
+}
+
+.news-collab{
+    margin-right: 70px;
     color: var(--secondary);
-    line-height: 1.7;
 }
 
 /* Galerie */
@@ -371,7 +448,7 @@ blockquote {
     line-height: 1.5;
 }
 
-/* Taille écrans moyens */
+/* Écrans moyens : tablettes et petites fenêtres */
 @media (max-width: 1024px) {
     header,
     footer {
@@ -399,10 +476,50 @@ blockquote {
     .our-univers {
         font-size: 35px;
     }
+
+    .news-description {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        align-items: center;
+        margin: 35px 24px;
+    }
+
+    .news-pic {
+        grid-column: 1;
+        width: 100%;
+        height: clamp(260px, 34vw, 350px);
+        margin: 0;
+        object-fit: cover;
+    }
+
+    .news-sub {
+        grid-column: 2;
+        margin: 0 0 0 -30px;
+        padding: 22px;
+        font-size: 90%;
+    }
+
+    .news-sub h1 {
+        font-size: clamp(24px, 3vw, 32px);
+    }
+
+    .news-collab {
+        margin-right: 0;
+        line-height: 1.6;
+    }
+
+    .news {
+        max-width: 850px;
+        margin: 35px auto 60px;
+        padding: 0 24px;
+        font-size: 120%;
+    }
 }
 
+/* Format moyen */
 @media (max-width: 850px) {
-    .work {
+    .work,
+    .note {
         grid-template-columns: 1fr;
     }
 
@@ -411,7 +528,7 @@ blockquote {
     }
 }
 
-/* Taille écrans téléphone */
+/* Format mobile */
 @media (max-width: 767px) {
     header,
     footer {
@@ -481,14 +598,27 @@ blockquote {
         width: 100%;
     }
 
+    .news-description {
+        grid-template-columns: 1fr;
+        margin: 25px 20px;
+    }
+
     .news-pic {
-        width: calc(100% - 40px);
-        margin: 20px;
+        grid-column: 1;
+        height: 240px;
+    }
+
+    .news-sub {
+        grid-column: 1;
+        margin: -20px 12px 0;
+        padding: 20px;
+        font-size: 100%;
     }
 
     .news {
-        margin: 20px;
-        padding: 16px;
+        margin: 30px 20px 50px;
+        padding: 0;
+        font-size: 100%;
     }
 
     .grid {
@@ -508,6 +638,7 @@ blockquote {
     }
 }
 
+/* Galerie sur mobile */
 @media (max-width: 600px) {
     .gallery {
         columns: 2 150px;
@@ -520,13 +651,15 @@ blockquote {
     }
 }
 
+/* Format plus petit */
 @media (max-width: 550px) {
     .drakengard,
     .nier,
     .drakengard3,
     .nierautomata,
     .voc,
-    .proj {
+    .proj,
+    .note-text {
         grid-template-columns: 1fr;
     }
 
@@ -535,7 +668,8 @@ blockquote {
     .drakengard3 img,
     .nierautomata img,
     .voc img,
-    .proj img {
+    .proj img,
+    .note-text img {
         grid-column: 1;
         grid-row: auto;
         height: 220px;
@@ -543,7 +677,9 @@ blockquote {
     }
 
     .work-sub,
-    .work-text {
+    .work-text,
+    .note-text h2,
+    .note-text p {
         grid-column: 1;
     }
 
